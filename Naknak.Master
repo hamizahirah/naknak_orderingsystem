@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Naknak.master.cs" 
+    Inherits="NAKNAK.Naknak" %>
+<%@ Register Src="~/UserControls/LoginStatus.ascx" TagPrefix="uc1" TagName="LoginStatus" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>NAKNAK 낙낙</title>
+    <link href="Style/master.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="page-container">
+        <img src="ImagesNaknak/naknakbanner.png" class="banner" alt="Naknak Banner" />
+        <div class="header">
+            <a href="Homepage.aspx">Home</a> &nbsp;|&nbsp;
+            <uc1:LoginStatus runat="server" ID="LogInStatus" CssClass="logout-button" />
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div class="footer">
+        <p>&copy; 2025 NAKNAK - Joy Is Coming!. All rights reserved.</p>
+    </div>
+</body>
+</html>
